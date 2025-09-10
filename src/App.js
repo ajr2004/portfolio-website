@@ -90,14 +90,33 @@ const Portfolio = () => {
     },
   ];
 
-
+  const projects = [
+    {
+      title: "Hybrid Model for Enhanced Rear-End Collision Detection in Intelligent Transportation Systems under Varied Environmental Conditions",
+      description: "Developed a hybrid model using DRNN and BI-LSTM for real-time rear-end collision detection in vehicles, achieving high accuracy under diverse conditions.",
+      technologies: ["Python", "PTV Vissim", "Machine Learning"],
+      link: "https://github.com/ajr2004/Rear-End-Collision-Detection-in-Fog-Based-Internet-of-Vehicles"
+    },
+    {
+      title: "College Predictor System",
+      description: "A Flask-based college admission prediction system using machine learning.",
+      technologies: ["Flask", "Machine Learning", "RapidMiner"],
+      link: "https://github.com/ajr2004/College_predictor"
+    },
+    {
+      title: "W3Schools website (Clone)",
+      description: "Using HTML, CSS, and JavaScript, created a W3Schools clone website that showcases expertise in front-end web development.",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      link: "https://industry-ready-2125.github.io/module-3-hosting-ajr2004/"
+    },
+  ];
   const experience = [
     {
-      role: "ML | Python | Rapid miner",
-      company: "College Predictor system",
-      link: "",
-      period: "June 2024",
-      description: "This project is a Flask‐based college admission prediction system that uses machine learning to forecast the best predicted collegesforstudents based on various categories. It includes visualization features in RapidMiner and plans for future enhancements, such as AI chatbots, VR tours, and virtual assistant integration."
+      role: "Full Stack Developer Intern",
+      company: "Flexternship By Ltimindtree under Trumio",
+      link: "https://github.com/ajr2004/smartlend",
+      period: "July - August 2025",
+      description: "Completed a Flexternship with LTIMindtree (via Trumio), where I worked on developing a full-stack Loan Management System using React, Spring Boot, REST APIs, and MySQL. Implemented key features such as secure authentication, role-based dashboards, EMI scheduler, CIBIL score generator, and integrated chat/email notifications."
     },
     {
       role: "Front end developer",
@@ -106,35 +125,7 @@ const Portfolio = () => {
       period: "May-June 2024",
       description: "During my internship in Keshavsoft. I worked for developing the website for Ultrawashtex,I was responsible for creating static web pages aligned with specified layout designs, contributing to the development of the company’s website"
     },
-    {
-      role: "Web Developer",
-      company: "W3Schools website (Clone)",
-      link: "https://industry-ready-2125.github.io/module-3-hosting-ajr2004/",
-      period: "MAR 2024",
-      description: "Using HTML, CSS, and JavaScript, created a W3Schools clone website that showcases expertise in front-end web development."
-    },
-    {
-      role: "Graphic Designer(UI) Intern",
-      company: "CodeClause",
-      link: "https://online.publuu.com/527607/1182129",
-      period: "September - October 2023",
-      projects: [
-        "Hospital Management System",
-        "UI Application Interface of Hospital",
-        "Instagram Carousel"
-      ]
-    },
-    {
-      role: "Data Science Intern",
-      company: "Oasis Infobyte",
-      link: "https://online.publuu.com/527607/1182188",
-      period: "July - Aug 2023",
-      projects: [
-        "Iris flower classification",
-        "Unemployment analysis with python",
-        "Email spam detection with machine learning"
-      ]
-    }
+
   ];
  
 
@@ -190,6 +181,7 @@ const Portfolio = () => {
           <ul className="flex justify-center gap-6">
             <li><a href="#about" className="hover:text-green-400">About</a></li>
             <li><a href="#education" className="hover:text-green-400">Education</a></li>
+            <li><a href="#projects" className="hover:text-green-400">Projects</a></li>
             <li><a href="#experience" className="hover:text-green-400">Experience</a></li>
             <li><a href="#skills" className="hover:text-green-400">Skills</a></li>
             <li><a href="https://drive.google.com/file/d/1ZlR09_y3SplYNoarJwlNoAWWSoBcZte4/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="hover:text-green-400">Resume</a></li>
@@ -286,7 +278,25 @@ const Portfolio = () => {
         </div>
       </section>
 
-       
+      {/* Projects */}
+      <section id="projects" className="py-16 bg-gray-800">
+        <div className="max-w-4xl mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-8">Projects</h2>
+          <div className="space-y-6">
+            {projects.map((project, index) => (
+              <div key={index} className="bg-gray-700 p-6 rounded-lg">
+                <h3 className="text-xl font-semibold mb-2">
+                  <a href={project.link} className="text-green-400 hover:text-green-300">{project.title}</a>
+                </h3>
+                <p className="text-lg mb-2">{project.description}</p>
+                <p className="text-gray-400 mb-4">{project.technologies.join(", ")}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+     
 
       {/* Experience */}
       <section id="experience" className="py-16 bg-gray-800">
