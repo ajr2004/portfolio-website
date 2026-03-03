@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  Mail, MapPin, Github, Linkedin, Terminal, Cpu, 
+  Mail, Github, Linkedin, Terminal, Cpu, 
   BookOpen, Layers, Code, Phone, ExternalLink, 
   Briefcase, Menu, X 
 } from 'lucide-react';
@@ -99,7 +99,7 @@ const Portfolio = () => {
     };
     timeout = setTimeout(animate, 100);
     return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, currentWordIndex]);
+  }, [displayText, isDeleting, currentWordIndex,words]);
 
   // Data Objects
   const skills = {
