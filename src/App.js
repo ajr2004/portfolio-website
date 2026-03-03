@@ -185,7 +185,7 @@ const Portfolio = () => {
             ))}
             <li>
               {/* REMINDER: ADD YOUR GOOGLE DRIVE RESUME LINK HERE */}
-              <a href="https://drive.google.com/file/d/1-uAic_hlxtQ4kAbPWHjEU-4DV7vuMDC7/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="bg-green-400 text-black px-4 py-2 rounded-sm hover:bg-white transition-colors">Resume</a>
+              <a href="https://drive.google.com/file/d/17ej9zOicDfjeeEj6ICw0o0RO4OCSEg8m/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="bg-green-400 text-black px-4 py-2 rounded-sm hover:bg-white transition-colors">Resume</a>
             </li>
           </ul>
 
