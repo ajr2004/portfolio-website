@@ -60,7 +60,12 @@ const ProjectCard = ({ title, description, tech, link }) => (
 );
 
 // --- Main Component ---
-
+ const words = [
+    "Software Engineer", 
+    "Java Full Stack Developer", 
+    "Microservices Architect"
+  ];
+  
 const Portfolio = () => {
   const [displayText, setDisplayText] = useState('');
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -68,11 +73,7 @@ const Portfolio = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   
   // Cleaned up the words array to the "Rule of Three"
-  const words = [
-    "Software Engineer", 
-    "Java Full Stack Developer", 
-    "Microservices Architect"
-  ];
+ 
   
   // Typing Effect Logic
   useEffect(() => {
@@ -99,7 +100,7 @@ const Portfolio = () => {
     };
     timeout = setTimeout(animate, 100);
     return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, currentWordIndex,words]);
+  }, [displayText, isDeleting, currentWordIndex]);
 
   // Data Objects
   const skills = {
